@@ -9,7 +9,12 @@ public class Square {
     }
 
     public void addPiece(Piece piece) {
-        this.piece = piece;
+        if (this.piece == null) {
+            this.piece = piece;
+        } else {
+            System.out.println("ALREADY A PIECE ON THIS SQUARE");
+            this.piece = piece;
+        }
     }
 
     public String toString() {
