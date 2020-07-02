@@ -47,37 +47,37 @@ public class Board {
         Pawn blackHPawn = new Pawn(PieceColour.BLACK);
         squares[7][6].addPiece(blackHPawn);  //h7
         // White pieces
-        Rook whiteARook = new Rook(PieceColour.BLACK);
+        Rook whiteARook = new Rook(PieceColour.WHITE);
         squares[0][0].addPiece(whiteARook);  //a1
-        Knight whiteBKnight = new Knight(PieceColour.BLACK);
+        Knight whiteBKnight = new Knight(PieceColour.WHITE);
         squares[1][0].addPiece(whiteBKnight);  //b1
-        Bishop whiteCBishop = new Bishop(PieceColour.BLACK);
+        Bishop whiteCBishop = new Bishop(PieceColour.WHITE);
         squares[2][0].addPiece(whiteCBishop);  //c1
-        Queen whiteQueen = new Queen(PieceColour.BLACK);
+        Queen whiteQueen = new Queen(PieceColour.WHITE);
         squares[3][0].addPiece(whiteQueen);  //d1
-        King whiteKing = new King(PieceColour.BLACK);
+        King whiteKing = new King(PieceColour.WHITE);
         squares[4][0].addPiece(whiteKing);  //e1
-        Bishop whiteFBishop = new Bishop(PieceColour.BLACK);
+        Bishop whiteFBishop = new Bishop(PieceColour.WHITE);
         squares[5][0].addPiece(whiteFBishop);  //f1
-        Knight whiteGKnight = new Knight(PieceColour.BLACK);
+        Knight whiteGKnight = new Knight(PieceColour.WHITE);
         squares[6][0].addPiece(whiteGKnight);  //g1
-        Rook whiteHRook = new Rook(PieceColour.BLACK);
+        Rook whiteHRook = new Rook(PieceColour.WHITE);
         squares[7][0].addPiece(whiteHRook);  //h1
-        Pawn whiteAPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteAPawn = new Pawn(PieceColour.WHITE);
         squares[0][1].addPiece(whiteAPawn);  //a2
-        Pawn whiteBPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteBPawn = new Pawn(PieceColour.WHITE);
         squares[1][1].addPiece(whiteBPawn);  //b2
-        Pawn whiteCPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteCPawn = new Pawn(PieceColour.WHITE);
         squares[2][1].addPiece(whiteCPawn);  //c2
-        Pawn whiteDPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteDPawn = new Pawn(PieceColour.WHITE);
         squares[3][1].addPiece(whiteDPawn);  //d2
-        Pawn whiteEPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteEPawn = new Pawn(PieceColour.WHITE);
         squares[4][1].addPiece(whiteEPawn);  //e2
-        Pawn whiteFPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteFPawn = new Pawn(PieceColour.WHITE);
         squares[5][1].addPiece(whiteFPawn);  //f2
-        Pawn whiteGPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteGPawn = new Pawn(PieceColour.WHITE);
         squares[6][1].addPiece(whiteGPawn);  //g2
-        Pawn whiteHPawn = new Pawn(PieceColour.BLACK);
+        Pawn whiteHPawn = new Pawn(PieceColour.WHITE);
         squares[7][1].addPiece(whiteHPawn);  //h2
     }
 
