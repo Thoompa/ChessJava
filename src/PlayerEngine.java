@@ -1,3 +1,3 @@
 public interface PlayerEngine {
-    public Move makeMove();
+    Move makeMove(Board board);
 }

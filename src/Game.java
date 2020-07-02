@@ -1,13 +1,40 @@
 public class Game {
     private PieceColour turn;
-    private Player[] players;
+    private Player white;
+    private Player black;
     private Board board;
+    private boolean hasEnded = false;
 
     public Game() {
         board = new Board();
+        turn = PieceColour.WHITE;
     }
 
     public void printBoard() {
         this.board.printBoard();
+    }
+
+    public void addPlayers(Player white, Player black) {
+        if (white.getColour() == PieceColour.WHITE && black.getColour() == PieceColour.BLACK) {
+            this.white = white;
+            this.black = black;
+        } else {
+            System.out.println("ERROR: Wrong colours");
+        }
+    }
+
+    public void makeMove() {
+        Move nextMove;
+        if (turn == PieceColour.WHITE) {
+            nextMove = white.makeMove(board);
+        } else {
+            nextMove = black.makeMove(board);
+        }
+        System.out.println(nextMove);
+        hasEnded = true;
+    }
+
+    public boolean hasEnded() {
+        return hasEnded;
     }
 }
