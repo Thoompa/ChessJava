@@ -5,8 +5,8 @@ public class Rook extends Piece {
     }
 
     @Override
-    public Square[] validMoves() {
-        return new Square[0];
+    public Move[] validMoves(Board board) {
+        return new Move[0];
     }
 
     @Override

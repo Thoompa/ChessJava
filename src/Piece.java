@@ -7,7 +7,7 @@ public abstract class Piece {
         this.type = type;
     }
 
-    public abstract Square[] validMoves();
+    public abstract Move[] validMoves(Board board);
     public abstract Square[] attackSquares();
     public abstract String print();
 }

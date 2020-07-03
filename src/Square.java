@@ -9,7 +9,7 @@ public class Square {
     }
 
     public void addPiece(Piece piece) {
-        if (this.piece == null) {
+        if (this.isEmpty()) {
             this.piece = piece;
         } else {
             System.out.println("ALREADY A PIECE ON THIS SQUARE");
@@ -18,15 +18,28 @@ public class Square {
     }
 
     public String toString() {
+        /*
+          Returns the string of the square location e.g. e5
+         */
         return String.format("%s%s", row, column);
     }
 
     public String print() {
-        //TODO: print piece or '.' if empty
+        /*
+          Returns the string of the piece in the square or '.' if empty
+         */
         if (piece == null) {
             return String.valueOf('.');
         } else {
             return piece.print();
+        }
+    }
+
+    public boolean isEmpty() {
+        if (this.piece == null) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

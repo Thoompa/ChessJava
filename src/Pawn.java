@@ -5,8 +5,12 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public Square[] validMoves() {
-        return new Square[0];
+    public Move[] validMoves(Board board) {
+        Move[] moves = new Move[0];
+        if (super.pieceColour == PieceColour.WHITE) {
+            //TODO
+        }
+        return moves;
     }
 
     @Override

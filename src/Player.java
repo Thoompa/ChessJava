@@ -24,6 +24,13 @@ public class Player {
     }
 
     public Move makeMove(Board board) {
-        return engine.makeMove(board);
+        PieceSet pieces;
+        if (colour == PieceColour.BLACK) {
+            pieces = board.getBlackPieces();
+        } else {
+            pieces = board.getWhitePieces();
+        }
+        Move[] Moves = pieces.getMoves(board);
+        return engine.makeMove(board, Moves);
     }
 }

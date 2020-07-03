@@ -1,6 +1,7 @@
 public class Board {
     Square[][] squares = new Square[8][8];
-    PieceSet[] pieces;
+    PieceSet blackPieces;
+    PieceSet whitePieces;
 
     public Board(){
         // Create squares
@@ -11,6 +12,8 @@ public class Board {
                 squares[i][j] = new Square(row, col);
             }
         }
+        blackPieces = new PieceSet(PieceColour.BLACK);
+        whitePieces = new PieceSet(PieceColour.WHITE);
 
         // Create pieces
         // Black pieces
@@ -46,6 +49,22 @@ public class Board {
         squares[6][6].addPiece(blackGPawn);  //g7
         Pawn blackHPawn = new Pawn(PieceColour.BLACK);
         squares[7][6].addPiece(blackHPawn);  //h7
+        blackPieces.addPiece(blackARook);
+        blackPieces.addPiece(blackBKnight);
+        blackPieces.addPiece(blackCBishop);
+        blackPieces.addPiece(blackQueen);
+        blackPieces.addPiece(blackKing);
+        blackPieces.addPiece(blackFBishop);
+        blackPieces.addPiece(blackGKnight);
+        blackPieces.addPiece(blackHRook);
+        blackPieces.addPiece(blackAPawn);
+        blackPieces.addPiece(blackBPawn);
+        blackPieces.addPiece(blackCPawn);
+        blackPieces.addPiece(blackDPawn);
+        blackPieces.addPiece(blackEPawn);
+        blackPieces.addPiece(blackFPawn);
+        blackPieces.addPiece(blackGPawn);
+        blackPieces.addPiece(blackHPawn);
         // White pieces
         Rook whiteARook = new Rook(PieceColour.WHITE);
         squares[0][0].addPiece(whiteARook);  //a1
@@ -79,6 +98,22 @@ public class Board {
         squares[6][1].addPiece(whiteGPawn);  //g2
         Pawn whiteHPawn = new Pawn(PieceColour.WHITE);
         squares[7][1].addPiece(whiteHPawn);  //h2
+        whitePieces.addPiece(whiteARook);
+        whitePieces.addPiece(whiteBKnight);
+        whitePieces.addPiece(whiteCBishop);
+        whitePieces.addPiece(whiteQueen);
+        whitePieces.addPiece(whiteKing);
+        whitePieces.addPiece(whiteFBishop);
+        whitePieces.addPiece(whiteGKnight);
+        whitePieces.addPiece(whiteHRook);
+        whitePieces.addPiece(whiteAPawn);
+        whitePieces.addPiece(whiteBPawn);
+        whitePieces.addPiece(whiteCPawn);
+        whitePieces.addPiece(whiteDPawn);
+        whitePieces.addPiece(whiteEPawn);
+        whitePieces.addPiece(whiteFPawn);
+        whitePieces.addPiece(whiteGPawn);
+        whitePieces.addPiece(whiteHPawn);
     }
 
     public void printBoard() {
@@ -90,5 +125,13 @@ public class Board {
             board.append('\n');
         }
         System.out.println(board);
+    }
+
+    public PieceSet getBlackPieces() {
+        return blackPieces;
+    }
+
+    public PieceSet getWhitePieces() {
+        return whitePieces;
     }
 }
