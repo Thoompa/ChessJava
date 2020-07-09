@@ -12,10 +12,12 @@ public class Board {
                 squares[i][j] = new Square(row, col);
             }
         }
+
+        // Initialise piece sets
         blackPieces = new PieceSet(PieceColour.BLACK);
         whitePieces = new PieceSet(PieceColour.WHITE);
 
-        // Create pieces
+        // Create pieces - make piece, add to a square, add to piece set
         // Black pieces
         Rook blackARook = new Rook(PieceColour.BLACK);
         squares[0][7].addPiece(blackARook);  //a8
@@ -118,12 +120,16 @@ public class Board {
 
     public void printBoard() {
         StringBuilder board = new StringBuilder();
+        board.append("--ABCDEFGH-\n");
+        board.append("-----------\n");
         for (int j = 7; j >= 0; j--) {
+            board.append(String.valueOf(j+1) + '-');
             for (int i = 0; i <= 7; i++) {
                 board.append(squares[i][j].print());
             }
-            board.append('\n');
+            board.append("-\n");
         }
+        board.append("-----------\n");
         System.out.println(board);
     }
 

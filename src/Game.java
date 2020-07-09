@@ -3,11 +3,12 @@ public class Game {
     private Player white;
     private Player black;
     private Board board;
-    private boolean hasEnded = false;
+    private boolean hasEnded;
 
     public Game() {
-        board = new Board();
+        board = new Board();  // Initialise board
         turn = PieceColour.WHITE;
+        hasEnded = false;
     }
 
     public void printBoard() {

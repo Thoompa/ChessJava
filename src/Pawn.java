@@ -8,7 +8,7 @@ public class Pawn extends Piece {
     public Move[] validMoves(Board board) {
         Move[] moves = new Move[0];
         if (super.pieceColour == PieceColour.WHITE) {
-            //TODO
+            System.out.println(board.whitePieces);
         }
         return moves;
     }
