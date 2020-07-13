@@ -1,7 +1,7 @@
 public class Knight extends Piece {
 
-    public Knight(PieceColour colour) {
-        super(colour, PieceType.KNIGHT);
+    public Knight(PieceColour colour, String square) {
+        super(colour, PieceType.KNIGHT, square);
     }
 
     @Override

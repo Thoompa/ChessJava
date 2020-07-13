@@ -30,7 +30,7 @@ public class Player {
         } else {
             pieces = board.getWhitePieces();
         }
-        Move[] Moves = pieces.getMoves(board);
-        return engine.makeMove(board, Moves);
+        Move[] moves = pieces.getMoves(board);
+        return engine.makeMove(board, moves);
     }
 }

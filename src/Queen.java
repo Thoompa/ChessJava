@@ -1,7 +1,7 @@
 public class Queen extends Piece {
 
-    public Queen(PieceColour colour) {
-        super(colour, PieceType.QUEEN);
+    public Queen(PieceColour colour, String square) {
+        super(colour, PieceType.QUEEN, square);
     }
 
     @Override

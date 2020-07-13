@@ -9,6 +9,7 @@ public class Move {
         this.startSquare = startSquare;
         this.endSquare = endSquare;
         this.piece = piece;
+        move = piece.print() + ',' + startSquare.toString() + ',' + endSquare.toString();
     }
 
     public Square getStartSquare() {
@@ -23,11 +24,11 @@ public class Move {
         return piece;
     }
 
-    public void addString(String move) {
-        this.move = move;
+    public String getString() {
+        return move;
     }
 
-    public String getMove() {
-        return move;
+    public void execute() {
+        // TODO
     }
 }

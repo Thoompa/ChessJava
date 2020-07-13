@@ -31,7 +31,8 @@ public class Game {
         } else {
             nextMove = black.makeMove(board);
         }
-        System.out.println(nextMove);
+        nextMove.execute();
+        System.out.println(nextMove.getString());
         hasEnded = true;
     }
 

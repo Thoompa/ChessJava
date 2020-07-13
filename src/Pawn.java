@@ -1,14 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Pawn extends Piece {
 
-    public Pawn(PieceColour colour) {
-        super(colour, PieceType.PAWN);
+    public Pawn(PieceColour colour, String square) {
+        super(colour, PieceType.PAWN, square);
     }
 
     @Override
     public Move[] validMoves(Board board) {
         Move[] moves = new Move[0];
         if (super.pieceColour == PieceColour.WHITE) {
-            System.out.println(board.whitePieces);
+            ArrayList<Square> pieceSquares = board.getWhitePieces().getSquares();
+            for (Square pieceSquare : pieceSquares) {
+                if (pieceSquare.toString().equals(super.square)) {
+                    Square newSquare = board.getSquares()[pieceSquare.getFile()][pieceSquare.getRank() + 1];
+                    moves = Arrays.copyOf(moves, moves.length + 1);
+                    moves[moves.length - 1] = new Move(pieceSquare, newSquare, this);
+//                    if (mySquare.getRank() == 1) {
+//                        if
+//                    }
+                }
+            }
         }
         return moves;
     }

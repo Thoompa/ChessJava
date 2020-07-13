@@ -1,7 +1,7 @@
 public class Rook extends Piece {
 
-    public Rook(PieceColour colour) {
-        super(colour, PieceType.ROOK);
+    public Rook(PieceColour colour, String square) {
+        super(colour, PieceType.ROOK, square);
     }
 
     @Override

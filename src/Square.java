@@ -3,7 +3,7 @@ public class Square {
     private char column;
     private Piece piece;
 
-    public Square(char row, char col) {
+    public Square(char col, char row) {
         this.row = row;
         this.column = col;
     }
@@ -21,7 +21,7 @@ public class Square {
         /*
           Returns the string of the square location e.g. e5
          */
-        return String.format("%s%s", row, column);
+        return String.format("%s%s", column, row);
     }
 
     public String print() {
@@ -36,10 +36,14 @@ public class Square {
     }
 
     public boolean isEmpty() {
-        if (this.piece == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.piece == null;
+    }
+
+    public int getFile() {
+        return (int) column - 97;
+    }
+
+    public int getRank() {
+        return Integer.parseInt(String.valueOf(row))-1;
     }
 }

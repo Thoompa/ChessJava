@@ -1,7 +1,7 @@
 public class Bishop extends Piece {
 
-    public Bishop(PieceColour colour) {
-        super(colour, PieceType.BISHOP);
+    public Bishop(PieceColour colour, String square) {
+        super(colour, PieceType.BISHOP, square);
     }
 
     @Override

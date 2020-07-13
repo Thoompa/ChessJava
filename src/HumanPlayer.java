@@ -10,16 +10,18 @@ public class HumanPlayer implements PlayerEngine {
         }
         System.out.println("Choose a move:");
         for (Move move : moves) {
-            System.out.println(move.getMove());
+            System.out.println(move.getString());
         }
         java.io.BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int i;
         outerLoop:
-        while (true) {
-            for (i = 0; i < moves.length; i++) {
-                if (String.valueOf(in).equals(moves[i].getMove())) break outerLoop;
-            }
-        }
-        return moves[i];
+//        while (true) {
+//            for (i = 0; i < moves.length; i++) {
+//                if (String.valueOf(in).equals(moves[i].getString())) break outerLoop;
+//                in = new BufferedReader(new InputStreamReader(System.in));
+////                System.out.println(in);
+//            }
+//        }
+        return moves[0];
     }
 }
